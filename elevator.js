@@ -48,17 +48,17 @@ function ElevatorTrip(elevator,person){
             return ("Person is already on request floor.")
         }
         else if(elevator.requestFloor>person.requestFloor){
-            elevator.direction--;
+           return elevator.currentFloor--;
+            console.log(elevator.currentFloor);
         }
         else{
-            elevator.direction++;
+          return  elevator.currentFloor++;
+            console.log(elevator.currentFloor);
         }
     }
 }
 
 var Eray = new Person("Eray", 4, 1, 50);
-callElevator(elevator, Eray);
-console.log(elevator);
-ElevatorTrip(elevator,Eray);
-console.log(elevator);
+console.log(callElevator(elevator, Eray));
+
 
